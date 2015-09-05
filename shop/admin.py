@@ -1,5 +1,5 @@
 from django.contrib import admin
-from shop.models import Product, Cart
+from shop.models import Product
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -7,9 +7,4 @@ class ProductAdmin(admin.ModelAdmin):
     list_display = ('name', 'description', 'price', 'photo', 'item_number')
 
 
-class CartAdmin(admin.ModelAdmin):
-    model = Cart
-
-
 admin.site.register(Product, ProductAdmin)
-admin.site.register(Cart, CartAdmin)
